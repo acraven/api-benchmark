@@ -1,6 +1,6 @@
 ﻿using Nancy;
 
-namespace Api.Benchmark.Nancy
+namespace Api.Benchmark.Nancy.SelfHost
 {
    public class SampleModule : NancyModule
    {

@@ -1,0 +1,24 @@
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <PropertyGroup>
+      <Configuration Condition="'$(Configuration)'==''">Release</Configuration>
+      <RepoPath Condition="'$(RepoPath)'==''">$(MSBuildProjectDirectory)</RepoPath>
+      <NancySelfHostSolutionPath>$(RepoPath)\nancy-selfhost\Nancy.sln</NancySelfHostSolutionPath>
+      <OwinSelfHostSolutionPath>$(RepoPath)\owin-selfhost\Owin.sln</OwinSelfHostSolutionPath>
+      <AspNetCoreProjectPath>$(RepoPath)\aspnetcore-selfhost\Api.Benchmark.AspNetCore.SelfHost\project.json</AspNetCoreProjectPath>
+
+      <NuGetToolsPath>$([System.IO.Path]::Combine($(SolutionDir), ".nuget"))</NuGetToolsPath>
+      <NuGetExePath>$(NuGetToolsPath)\NuGet.exe</NuGetExePath>
+   </PropertyGroup>
+  
+   <Target Name="Build" DependsOnTargets="RestoreRuntimePackages">
+      <Exec Command="dotnet build --configuration Release &quot;$(AspNetCoreProjectPath)&quot;" />
+      <MSBuild Projects="$(NancySelfHostSolutionPath)" Targets="Clean;Rebuild" Properties="Configuration=$(Configuration)" />
+      <MSBuild Projects="$(OwinSelfHostSolutionPath)" Targets="Clean;Rebuild" Properties="Configuration=$(Configuration)" />
+   </Target>
+
+   <Target Name="RestoreRuntimePackages">
+      <Exec Command="dotnet restore &quot;$(AspNetCoreProjectPath)&quot;" />
+      <Exec Command="$(NuGetExePath) restore &quot;$(NancySelfHostSolutionPath)&quot;" />
+      <Exec Command="$(NuGetExePath) restore &quot;$(OwinSelfHostSolutionPath)&quot;" />
+   </Target>
+</Project>

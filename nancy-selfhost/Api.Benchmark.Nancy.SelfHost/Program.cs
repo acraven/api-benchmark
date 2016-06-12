@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Owin.Hosting;
 
-namespace Api.Benchmark.Nancy
+namespace Api.Benchmark.Nancy.SelfHost
 {
    class Program
    {
