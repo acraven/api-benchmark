@@ -11,3 +11,6 @@ ab.exe -n 40000 -c 20 http://localhost:8100/ > results\aspnetcore-selfhost.txt
 
 ab.exe -n 20 http://localhost:8110/
 ab.exe -n 40000 -c 20 http://localhost:8110/ > results\nodejs-selfhost.txt 
+
+ab.exe -n 20 http://localhost:8120/
+ab.exe -n 40000 -c 20 http://localhost:8120/ > results\aspnetcore-owin-selfhost.txt 
