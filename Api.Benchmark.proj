@@ -4,7 +4,7 @@
       <RepoPath Condition="'$(RepoPath)'==''">$(MSBuildProjectDirectory)</RepoPath>
       <NancySelfHostSolutionPath>$(RepoPath)\nancy-selfhost\Nancy.sln</NancySelfHostSolutionPath>
       <OwinSelfHostSolutionPath>$(RepoPath)\owin-selfhost\Owin.sln</OwinSelfHostSolutionPath>
-      <AspNetCoreProjectPath>$(RepoPath)\aspnetcore-selfhost\Api.Benchmark.AspNetCore.SelfHost\project.json</AspNetCoreProjectPath>
+      <AspNetCoreProjectPath>$(RepoPath)\aspnetcore-selfhost\project.json</AspNetCoreProjectPath>
 
       <NuGetToolsPath>$([System.IO.Path]::Combine($(SolutionDir), ".nuget"))</NuGetToolsPath>
       <NuGetExePath>$(NuGetToolsPath)\NuGet.exe</NuGetExePath>
