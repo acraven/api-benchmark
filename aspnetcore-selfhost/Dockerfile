@@ -1,10 +1,8 @@
-FROM microsoft/dotnet
+FROM microsoft/dotnet:core
 
-COPY . /app
 WORKDIR /app
 
-RUN ["dotnet", "restore"]
-RUN ["dotnet", "build"]
+COPY publish/ /app/
 
 EXPOSE 8100
-ENTRYPOINT ["dotnet", "run", "--server.urls http://0.0.0.0:8100"]
+ENTRYPOINT dotnet aspnetcore-selfhost.dll

@@ -1,8 +1,9 @@
 #!/bin/bash
 
-rm -rf build
-mkdir build
+rm -rf publish
+mkdir publish
 
-dotnet restore Api.Benchmark.AspNetCore.SelfHost/project.json
-dotnet build -c Release -f netcoreapp1.0 -o build Api.Benchmark.AspNetCore.SelfHost/project.json
-docker build -t api-benchmark-aspnetcore:latest .
+dotnet restore project.json
+dotnet publish -c Release -f netcoreapp1.0 -o publish project.json
+docker build -t api-benchmark-aspnetcore-owin:latest .
+docker run -it -p 8100:8100 api-benchmark-aspnetcore-owin:latest
