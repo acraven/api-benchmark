@@ -5,6 +5,6 @@ var server = http.createServer(function (request, response) {
   response.end("Hello World!");
 });
 
-server.listen(8110);
+server.listen(8110, '0.0.0.0');
 
 console.log("Server running at http://localhost:8110/");

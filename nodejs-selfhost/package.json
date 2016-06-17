@@ -1,0 +1,9 @@
+{
+  "name": "nodejs-selfhost",
+  "version": "1.0.0",
+  "description": "Node.js Api Benchmark",
+  "main": "helloworld.js",
+  "scripts": {
+    "start": "node helloworld.js"
+  }
+}
