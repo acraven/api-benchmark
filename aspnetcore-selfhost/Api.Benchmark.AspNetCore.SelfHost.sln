@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Api.Benchmark.AspNetCore.SelfHost", "Api.Benchmark.AspNetCore.SelfHost.xproj", "{5849A3D9-14F1-4E51-B9C2-ACFC15E01DF7}"
 EndProject
