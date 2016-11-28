@@ -1,3 +1,6 @@
+rm -f results
+mkdir results
+
 ip=$(docker-machine ip)
 
 docker-compose up --build -d
