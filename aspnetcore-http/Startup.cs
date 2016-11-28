@@ -3,15 +3,18 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 
-namespace Api.Benchmark.AspNetCore.Owin.SelfHost
+namespace Api.Benchmark.AspNetCore.Http
 {
     public class Startup
     {
         public void Configure(IApplicationBuilder app)
         {
-            app.Run(context =>
+            app.Map("/ping", builder =>
             {
-                return context.Response.WriteAsync("Hello World!");
+                builder.Run(context =>
+                {
+                    return context.Response.WriteAsync("Pong!");
+                });
             });
         }
     }

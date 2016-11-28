@@ -11,3 +11,8 @@ services:
     container_name: api-benchmark-aspnetcore-mvc
     ports:
       - "8105:8105"
+  aspnetcore-http:
+    build: ./aspnetcore-http
+    container_name: api-benchmark-aspnetcore-http
+    ports:
+      - "8120:8120"

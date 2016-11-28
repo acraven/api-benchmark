@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 
-namespace Api.Benchmark.AspNetCore.Owin.SelfHost
+namespace Api.Benchmark.AspNetCore.Http
 {
     public class Program
     {
