@@ -1,10 +1,22 @@
-var http = require('http');
+'use strict'
 
-var server = http.createServer(function (request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("Hello World!");
-});
+const express = require('express')  
+const app = express()
+const bodyParser = require('body-parser');
+const port = process.env.PORT || 8110
 
-server.listen(8110, '0.0.0.0');
+app.use(bodyParser.json())
 
-console.log("Server running at http://localhost:8110/");
+app.get('/ping', (request, response) => { 
+  response.contentType('text/plain');
+  response.status(200).send('Pong!').end
+})
+
+app.listen(port, (err) => {  
+  if (err) {
+    console.log(err)
+    process.exit(1)
+  }
+
+  console.log(`server is listening on ${port}`)
+})

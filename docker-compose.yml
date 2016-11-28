@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  nodejs:
+    build: ./nodejs-selfhost
+    container_name: api-benchmark-nodejs
+    ports:
+      - "8110:8110"
