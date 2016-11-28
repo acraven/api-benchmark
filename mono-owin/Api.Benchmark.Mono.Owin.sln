@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1.csproj", "{29CC06EE-AEA3-4C6D-83AB-3878242E9EC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Benchmark.Mono.Owin", "Api.Benchmark.Mono.Owin.csproj", "{EA517D73-DA6A-41C0-8106-097D482AE645}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29CC06EE-AEA3-4C6D-83AB-3878242E9EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29CC06EE-AEA3-4C6D-83AB-3878242E9EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29CC06EE-AEA3-4C6D-83AB-3878242E9EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29CC06EE-AEA3-4C6D-83AB-3878242E9EC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA517D73-DA6A-41C0-8106-097D482AE645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA517D73-DA6A-41C0-8106-097D482AE645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA517D73-DA6A-41C0-8106-097D482AE645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA517D73-DA6A-41C0-8106-097D482AE645}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

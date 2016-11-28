@@ -2,7 +2,7 @@ version: '2'
 
 services:
   nodejs:
-    build: ./nodejs-selfhost
+    build: ./nodejs
     container_name: api-benchmark-nodejs
     ports:
       - "8110:8110"
@@ -16,3 +16,8 @@ services:
     container_name: api-benchmark-aspnetcore-http
     ports:
       - "8120:8120"
+  mono-owin:
+    build: ./mono-owin
+    container_name: api-benchmark-mono-owin
+    ports:
+      - "8130:8130"
