@@ -7,7 +7,7 @@ services:
     ports:
       - "8110:8110"
   aspnetcore-mvc:
-    build: ./aspnetcore-mvc-selfhost
+    build: ./aspnetcore-mvc
     container_name: api-benchmark-aspnetcore-mvc
     ports:
       - "8105:8105"
