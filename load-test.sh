@@ -17,4 +17,7 @@ ab.exe -n 40000 -c 20 http://$ip:8120/ > results/aspnetcore-http.txt
 ab.exe -n 20 http://$ip:8130/ping > /dev/null
 ab.exe -n 40000 -c 20 http://$ip:8130/ > results/mono-owin.txt 
 
+ab.exe -n 20 http://$ip:8140/ping > /dev/null
+ab.exe -n 40000 -c 20 http://$ip:8140/ > results/mono-nancy.txt 
+
 docker-compose down
