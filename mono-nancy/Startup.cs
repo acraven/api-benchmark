@@ -1,6 +1,6 @@
 ﻿using Owin;
 
-namespace Api.Benchmark.Nancy.SelfHost
+namespace Api.Benchmark.Mono.Nancy
 {
    public class Startup
    {

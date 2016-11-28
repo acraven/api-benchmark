@@ -21,3 +21,8 @@ services:
     container_name: api-benchmark-mono-owin
     ports:
       - "8130:8130"
+  mono-nancy:
+    build: ./mono-nancy
+    container_name: api-benchmark-mono-nancy
+    ports:
+      - "8140:8140"

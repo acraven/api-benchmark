@@ -1,15 +1,14 @@
 ﻿using System;
 using Microsoft.Owin.Hosting;
-using Owin;
 using System.Threading;
 
-namespace Api.Benchmark.Mono.Owin
+namespace Api.Benchmark.Mono.Nancy
 {
    class Program
    {
       static void Main(string[] args)
       {
-         var url = "http://*:8130";
+         var url = "http://*:8140";
 
          Console.CancelKeyPress += (sender, eventArgs) =>
          {
@@ -22,21 +21,6 @@ namespace Api.Benchmark.Mono.Owin
             Console.WriteLine("Press Ctrl-C to exit");
             Thread.Sleep(Timeout.Infinite);
          }
-      }
-   }
-
-   public class Startup
-   {
-      public void Configuration(IAppBuilder app)
-      {
-         app.Map("/ping", builder =>
-         {
-            builder.Run(context =>
-            {
-               context.Response.ContentType = "text/plain";
-               return context.Response.WriteAsync("Pong!");
-            });
-         });
       }
    }
 }

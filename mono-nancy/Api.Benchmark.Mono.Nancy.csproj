@@ -7,8 +7,8 @@
     <ProjectGuid>{9E18464F-14D7-4F33-8844-78B91EF9CB53}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Api.Benchmark.Nancy.SelfHost</RootNamespace>
-    <AssemblyName>Api.Benchmark.Nancy.SelfHost</AssemblyName>
+    <RootNamespace>Api.Benchmark.Mono.Nancy</RootNamespace>
+    <AssemblyName>Api.Benchmark.Mono.Nancy</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -40,7 +40,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

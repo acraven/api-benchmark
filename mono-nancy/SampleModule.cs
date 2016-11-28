@@ -1,12 +1,12 @@
 ﻿using Nancy;
 
-namespace Api.Benchmark.Nancy.SelfHost
+namespace Api.Benchmark.Mono.Nancy
 {
    public class SampleModule : NancyModule
    {
       public SampleModule()
       {
-         Get["/"] = _ => "Hello World!";
+         Get["/ping"] = _ => "Pong!";
       }
    }
 }
