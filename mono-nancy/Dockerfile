@@ -11,5 +11,5 @@ COPY . /app
 RUN mono nuget.exe restore Api.Benchmark.Mono.Nancy.sln
 RUN xbuild /property:Configuration=Release Api.Benchmark.Mono.Nancy.csproj
 
-EXPOSE 8130
+EXPOSE 8140
 CMD [ "mono", "bin/Release/Api.Benchmark.Mono.Nancy.exe" ]
