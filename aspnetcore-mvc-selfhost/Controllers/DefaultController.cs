@@ -4,10 +4,10 @@ namespace Api.Benchmark.AspNetCore.SelfHost.Controllers
 {
     public class DefaultController : Controller
     {
-        [Route("/")]
-        public string Get()
+        [Route("/ping")]
+        public string Ping()
         {
-            return "Hello World!";
+            return "Pong!";
         }
     }
 }

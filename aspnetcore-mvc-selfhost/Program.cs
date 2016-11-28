@@ -9,7 +9,6 @@ namespace Api.Benchmark.AspNetCore.SelfHost
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseUrls("http://*:8105")
                 .UseStartup<Startup>()
                 .Build();
