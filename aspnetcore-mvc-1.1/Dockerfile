@@ -5,5 +5,5 @@ WORKDIR /app
 COPY . /app
 RUN dotnet restore
 
-EXPOSE 8110
+EXPOSE 8111
 CMD [ "dotnet", "run", "-c", "Release" ]

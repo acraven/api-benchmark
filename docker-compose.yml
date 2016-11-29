@@ -5,17 +5,27 @@ services:
     build: ./nodejs
     container_name: api-benchmark-nodejs
     ports:
-      - "8110:8110"
+      - "8100:8100"
   aspnetcore-mvc:
     build: ./aspnetcore-mvc
     container_name: api-benchmark-aspnetcore-mvc
     ports:
-      - "8105:8105"
+      - "8110:8110"
+  aspnetcore-mvc-1.1:
+    build: ./aspnetcore-mvc-1.1
+    container_name: api-benchmark-aspnetcore-mvc-1.1
+    ports:
+      - "8111:8111"
   aspnetcore-http:
     build: ./aspnetcore-http
     container_name: api-benchmark-aspnetcore-http
     ports:
       - "8120:8120"
+  aspnetcore-http-1.1:
+    build: ./aspnetcore-http-1.1
+    container_name: api-benchmark-aspnetcore-http-1.1
+    ports:
+      - "8121:8121"
   mono-owin:
     build: ./mono-owin
     container_name: api-benchmark-mono-owin

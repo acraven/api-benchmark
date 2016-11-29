@@ -8,7 +8,7 @@ namespace Api.Benchmark.AspNetCore.Mvc
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-                .UseUrls("http://*:8110")
+                .UseUrls("http://*:8111")
                 .UseStartup<Startup>()
                 .Build();
 
